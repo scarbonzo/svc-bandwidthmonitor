@@ -1,0 +1,7 @@
+C:\VS\services\bandwidthmonitor\bwm-svc\bwm-svc\bin\Debug\bwm-svc.exe.config
+C:\VS\services\bandwidthmonitor\bwm-svc\bwm-svc\bin\Debug\bwm-svc.exe
+C:\VS\services\bandwidthmonitor\bwm-svc\bwm-svc\bin\Debug\bwm-svc.pdb
+C:\VS\services\bandwidthmonitor\bwm-svc\bwm-svc\obj\Debug\bwm-svc.csprojAssemblyReference.cache
+C:\VS\services\bandwidthmonitor\bwm-svc\bwm-svc\obj\Debug\bwm-svc.csproj.CoreCompileInputs.cache
+C:\VS\services\bandwidthmonitor\bwm-svc\bwm-svc\obj\Debug\bwm-svc.exe
+C:\VS\services\bandwidthmonitor\bwm-svc\bwm-svc\obj\Debug\bwm-svc.pdb
