@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bwm-svc", "bwm-svc\bwm-svc.csproj", "{5E0648E8-0B20-430E-B11B-72C77FEDB31C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bwm-api", "..\bwm-api\bwm-api.csproj", "{415AC1D1-C2B9-44CA-827B-716C2B1F84F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E0648E8-0B20-430E-B11B-72C77FEDB31C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E0648E8-0B20-430E-B11B-72C77FEDB31C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E0648E8-0B20-430E-B11B-72C77FEDB31C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E0648E8-0B20-430E-B11B-72C77FEDB31C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{415AC1D1-C2B9-44CA-827B-716C2B1F84F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{415AC1D1-C2B9-44CA-827B-716C2B1F84F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{415AC1D1-C2B9-44CA-827B-716C2B1F84F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{415AC1D1-C2B9-44CA-827B-716C2B1F84F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48092D35-C537-4378-91BF-20FF28B9D0B5}
+	EndGlobalSection
+EndGlobal
