@@ -51,7 +51,7 @@ public partial class Service1 : ServiceBase
 
     public void OnDebug()
     {
-        CreateDevices();
+        //CreateDevices();
         //Manually kick off the service when debugging
         OnStart(null);
     }

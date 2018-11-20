@@ -3,10 +3,6 @@ C:\VS\services\bandwidthmonitor\bwm-api\bin\Debug\netcoreapp2.2\bwm-api.runtimec
 C:\VS\services\bandwidthmonitor\bwm-api\bin\Debug\netcoreapp2.2\bwm-api.runtimeconfig.dev.json
 C:\VS\services\bandwidthmonitor\bwm-api\bin\Debug\netcoreapp2.2\bwm-api.dll
 C:\VS\services\bandwidthmonitor\bwm-api\bin\Debug\netcoreapp2.2\bwm-api.pdb
-C:\VS\services\bandwidthmonitor\bwm-api\bin\Debug\netcoreapp2.2\bwm-svc.exe
-C:\VS\services\bandwidthmonitor\bwm-api\bin\Debug\netcoreapp2.2\SnmpSharpNet.dll
-C:\VS\services\bandwidthmonitor\bwm-api\bin\Debug\netcoreapp2.2\bwm-svc.pdb
-C:\VS\services\bandwidthmonitor\bwm-api\bin\Debug\netcoreapp2.2\bwm-svc.exe.config
 C:\VS\services\bandwidthmonitor\bwm-api\obj\Debug\netcoreapp2.2\bwm-api.csprojAssemblyReference.cache
 C:\VS\services\bandwidthmonitor\bwm-api\obj\Debug\netcoreapp2.2\bwm-api.csproj.CoreCompileInputs.cache
 C:\VS\services\bandwidthmonitor\bwm-api\obj\Debug\netcoreapp2.2\bwm-api.RazorAssemblyInfo.cache
@@ -14,6 +10,5 @@ C:\VS\services\bandwidthmonitor\bwm-api\obj\Debug\netcoreapp2.2\bwm-api.RazorAss
 C:\VS\services\bandwidthmonitor\bwm-api\obj\Debug\netcoreapp2.2\bwm-api.AssemblyInfoInputs.cache
 C:\VS\services\bandwidthmonitor\bwm-api\obj\Debug\netcoreapp2.2\bwm-api.AssemblyInfo.cs
 C:\VS\services\bandwidthmonitor\bwm-api\obj\Debug\netcoreapp2.2\bwm-api.RazorTargetAssemblyInfo.cache
-C:\VS\services\bandwidthmonitor\bwm-api\obj\Debug\netcoreapp2.2\bwm-api.csproj.CopyComplete
 C:\VS\services\bandwidthmonitor\bwm-api\obj\Debug\netcoreapp2.2\bwm-api.dll
 C:\VS\services\bandwidthmonitor\bwm-api\obj\Debug\netcoreapp2.2\bwm-api.pdb

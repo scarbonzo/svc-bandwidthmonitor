@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "ac19148aaba404c0daa377756c214199649b2ed8"
+    "signature": "ddf1685b50fb2167ba74f0080f99079124505711"
   },
   "compilationOptions": {
     "defines": [
@@ -27,8 +27,8 @@
           "Microsoft.AspNetCore.App": "2.2.0-preview2-35157",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0-preview3-35497",
           "Microsoft.NETCore.App": "2.2.0-preview2-26905-02",
-          "MongoDB.Driver": "2.7.2",
-          "bwm-svc": "1.0.0"
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.0.1916590",
+          "MongoDB.Driver": "2.7.2"
         },
         "runtime": {
           "bwm-api.dll": {}
@@ -233,6 +233,7 @@
       },
       "Microsoft.NETCore.Platforms/2.2.0-preview2-26905-02": {},
       "Microsoft.NETCore.Targets/2.0.0": {},
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.0.1916590": {},
       "Microsoft.Win32.Primitives/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.2.0-preview2-26905-02",
@@ -583,25 +584,6 @@
         "dependencies": {
           "System.Runtime": "4.3.0",
           "System.Runtime.Handles": "4.3.0"
-        }
-      },
-      "bwm-svc/1.0.0": {
-        "dependencies": {
-          "SnmpSharpNet": "0.9.5.0"
-        },
-        "runtime": {
-          "bwm-svc.exe": {}
-        },
-        "compile": {
-          "bwm-svc.exe": {}
-        }
-      },
-      "SnmpSharpNet.Reference/0.9.5.0": {
-        "runtime": {
-          "SnmpSharpNet.dll": {
-            "assemblyVersion": "0.9.5.0",
-            "fileVersion": "0.9.5.0"
-          }
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3667,6 +3649,13 @@
       "path": "microsoft.netcore.targets/2.0.0",
       "hashPath": "microsoft.netcore.targets.2.0.0.nupkg.sha512"
     },
+    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.0.1916590": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bIEPJ4V0spW0aLb5/XQvs8ziv85wrR62IDowAItnfXCXHOUelEEOW59lq95IfXMFf/tWUDyrcLQh8rnFVfWWyw==",
+      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.0.1916590",
+      "hashPath": "microsoft.visualstudio.azure.containers.tools.targets.1.0.1916590.nupkg.sha512"
+    },
     "Microsoft.Win32.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -3806,16 +3795,6 @@
       "sha512": "sha512-RS3cQetRjev/kUuRlmNGNwQpQGcuFENG2XwndWddz9baMf07RkD+XkJcz3XuRgulYSBOX89UylZqLFsRXI/hfg==",
       "path": "system.threading.threadpool/4.3.0",
       "hashPath": "system.threading.threadpool.4.3.0.nupkg.sha512"
-    },
-    "bwm-svc/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "SnmpSharpNet.Reference/0.9.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",
