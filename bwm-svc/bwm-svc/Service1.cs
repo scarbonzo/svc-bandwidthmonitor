@@ -145,7 +145,7 @@ public partial class Service1 : ServiceBase
                 return null;
             }
         }
-        catch { return null; }
+        catch (Exception e) { Console.WriteLine(e); return null; }
     }
 
     private static List<Device> GetDevicesFromDb()
@@ -160,9 +160,9 @@ public partial class Service1 : ServiceBase
 
             _devices.AddRange(collection.ToList());
         }
-        catch { }
+        catch (Exception e) { Console.WriteLine(e); }
 
-        
+
         return _devices;
     }
 
@@ -175,7 +175,7 @@ public partial class Service1 : ServiceBase
 
             database.GetCollection<Bandwidth>(Bandwidth.Site).InsertOne(Bandwidth);
         }
-        catch { }
+        catch (Exception e) { Console.WriteLine(e); }
     }
 
     private static void CreateDevices()

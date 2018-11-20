@@ -11,15 +11,14 @@ public class DevicesController : ControllerBase
 {
     private const string dbServer = "192.168.50.225";
     private const string dbName = "bwm";
-    private const string dbCollection = "devices";
 
     [HttpGet]
     [Route("api/v1/[controller]")]
-    public ActionResult GetOne()
+    public ActionResult GetAll()
     {
         var client = new MongoClient("mongodb://" + dbServer);
         var database = client.GetDatabase(dbName);
-        var collection = database.GetCollection<Device>(dbCollection).AsQueryable();
+        var collection = database.GetCollection<Device>("devices").AsQueryable();
 
         var result = collection.ToList();
 
@@ -30,11 +29,8 @@ public class DevicesController : ControllerBase
     [Route("api/v1/[controller]/{id}")]
     public ActionResult GetOne(Guid id)
     {
-        var client = new MongoClient("mongodb://" + dbServer);
-        var database = client.GetDatabase(dbName);
-        var collection = database.GetCollection<Device>(dbCollection).AsQueryable();
+        var result = GetDeviceFromId(id);
 
-        var result = collection.Where(x => x.Id == id);
 
         return Ok(result);
     }
@@ -45,7 +41,7 @@ public class DevicesController : ControllerBase
     {
         var client = new MongoClient("mongodb://" + dbServer);
         var database = client.GetDatabase(dbName);
-        var collection = database.GetCollection<Device>(dbCollection).AsQueryable();
+        var collection = database.GetCollection<Device>("devices").AsQueryable();
         var site = collection.FirstOrDefault(x => x.Id == id);
 
         var bandwidths = database.GetCollection<Bandwidth>(site.Site).AsQueryable();
@@ -65,7 +61,7 @@ public class DevicesController : ControllerBase
     {
         var client = new MongoClient("mongodb://" + dbServer);
         var database = client.GetDatabase(dbName);
-        var collection = database.GetCollection<Device>(dbCollection).AsQueryable();
+        var collection = database.GetCollection<Device>("devices").AsQueryable();
         var site = collection.FirstOrDefault(x => x.Id == id);
 
         var bandwidths = database.GetCollection<Bandwidth>(site.Site).AsQueryable();
@@ -86,7 +82,7 @@ public class DevicesController : ControllerBase
 
         var devices = new MongoClient("mongodb://" + dbServer)
             .GetDatabase(dbName)
-            .GetCollection<Device>(dbCollection)
+            .GetCollection<Device>("devices")
             .AsQueryable()
             .ToList();
 
@@ -106,10 +102,97 @@ public class DevicesController : ControllerBase
 
                 throughputs.Add(CalculateThroughput(d, counters));
             }
-            catch { }
+            catch(Exception e) { Console.WriteLine(e); }
         }
 
         return Ok(throughputs);
+    }
+
+    [HttpGet]
+    [Route("api/v1/[controller]/{id}/bwh")]
+    public ActionResult GetDeviceThroughputHistory(Guid id)
+    {
+        var device = GetDeviceFromId(id);
+
+        var history = new History
+        {
+            DeviceIPAddress = device.IPAddress,
+            Site = device.Site,
+            Current = CalculateThroughput(device, GetCurrentCounters(id)),
+            Last5Minutes = CalculateThroughput(device, Get5MinuteCounters(id)),
+            Last15Minutes = CalculateThroughput(device, Get15MinuteCounters(id)),
+        };
+
+        return Ok(history);
+    }
+
+
+    private static Device GetDeviceFromId(Guid id)
+    {
+        var client = new MongoClient("mongodb://" + dbServer);
+        var database = client.GetDatabase(dbName);
+        var collection = database.GetCollection<Device>("devices").AsQueryable();
+
+        var result = collection.FirstOrDefault(x => x.Id == id);
+
+        return result;
+    }
+
+    private static Bandwidth[] GetCurrentCounters(Guid id)
+    {
+        var device = GetDeviceFromId(id);
+
+        var client = new MongoClient("mongodb://" + dbServer);
+        var database = client.GetDatabase(dbName);
+        var bandwidths = database.GetCollection<Bandwidth>(device.Site).AsQueryable();
+
+        var result = bandwidths
+            .OrderByDescending(x => x.Timestamp)
+            .Take(2)
+            .Skip(0)
+            .ToArray();
+
+        return result;
+    }
+
+    private static Bandwidth[] Get5MinuteCounters(Guid id)
+    {
+        var device = GetDeviceFromId(id);
+
+        var client = new MongoClient("mongodb://" + dbServer);
+        var database = client.GetDatabase(dbName);
+        var bandwidths = database.GetCollection<Bandwidth>(device.Site).AsQueryable();
+
+        var t0 = bandwidths
+            .OrderByDescending(x => x.Timestamp)
+            .First();
+
+        var t1 = bandwidths
+            .OrderByDescending(x => x.Timestamp)
+            .First(x => x.Timestamp < DateTime.Now.AddMinutes(-5));
+;
+
+        return new Bandwidth[] { t0, t1 };
+    }
+
+    private static Bandwidth[] Get15MinuteCounters(Guid id)
+    {
+        var device = GetDeviceFromId(id);
+
+        var client = new MongoClient("mongodb://" + dbServer);
+        var database = client.GetDatabase(dbName);
+        var bandwidths = database.GetCollection<Bandwidth>(device.Site).AsQueryable();
+
+        var t0 = bandwidths
+            .OrderByDescending(x => x.Timestamp)
+            .First();
+
+        var t1 = bandwidths
+            .OrderByDescending(x => x.Timestamp)
+            .First(x => x.Timestamp < DateTime.Now.AddMinutes(-15));
+        ;
+
+        return new Bandwidth[] { t0, t1 };
     }
 
     private static Throughput CalculateThroughput(Device device, Bandwidth[] counters)
@@ -142,4 +225,5 @@ public class DevicesController : ControllerBase
 
         return throughput;
     }
+
 }

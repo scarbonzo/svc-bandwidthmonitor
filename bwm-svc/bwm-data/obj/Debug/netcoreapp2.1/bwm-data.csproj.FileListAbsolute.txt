@@ -1,0 +1,9 @@
+C:\VS\services\bandwidthmonitor\bwm-svc\bwm-data\bin\Debug\netcoreapp2.1\bwm-data.deps.json
+C:\VS\services\bandwidthmonitor\bwm-svc\bwm-data\bin\Debug\netcoreapp2.1\bwm-data.dll
+C:\VS\services\bandwidthmonitor\bwm-svc\bwm-data\bin\Debug\netcoreapp2.1\bwm-data.pdb
+C:\VS\services\bandwidthmonitor\bwm-svc\bwm-data\obj\Debug\netcoreapp2.1\bwm-data.csprojAssemblyReference.cache
+C:\VS\services\bandwidthmonitor\bwm-svc\bwm-data\obj\Debug\netcoreapp2.1\bwm-data.csproj.CoreCompileInputs.cache
+C:\VS\services\bandwidthmonitor\bwm-svc\bwm-data\obj\Debug\netcoreapp2.1\bwm-data.AssemblyInfoInputs.cache
+C:\VS\services\bandwidthmonitor\bwm-svc\bwm-data\obj\Debug\netcoreapp2.1\bwm-data.AssemblyInfo.cs
+C:\VS\services\bandwidthmonitor\bwm-svc\bwm-data\obj\Debug\netcoreapp2.1\bwm-data.dll
+C:\VS\services\bandwidthmonitor\bwm-svc\bwm-data\obj\Debug\netcoreapp2.1\bwm-data.pdb
