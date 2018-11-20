@@ -9,7 +9,7 @@ public class Bandwidth
     public Guid Id { get; set; }
     public string DeviceIPAddress { get; set; }
     public string Site { get; set; }
-    public DateTime Timepstamp { get; set; }
+    public DateTime Timestamp { get; set; }
     public double X0Speed { get; set; }
     public double X0Ingress { get; set; }
     public double X0Egress { get; set; }

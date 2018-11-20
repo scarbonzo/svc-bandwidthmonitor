@@ -51,7 +51,7 @@ public partial class Service1 : ServiceBase
 
     public void OnDebug()
     {
-        //CreateDevices();
+        CreateDevices();
         //Manually kick off the service when debugging
         OnStart(null);
     }
@@ -122,7 +122,7 @@ public partial class Service1 : ServiceBase
                             Id = Guid.NewGuid(),
                             DeviceIPAddress = IP,
                             Site = Site,
-                            Timepstamp = DateTime.Now,
+                            Timestamp = DateTime.Now,
                             X0Speed = Convert.ToDouble(result.Pdu.VbList[0].Value.ToString()),
                             X0Ingress = Convert.ToDouble(result.Pdu.VbList[1].Value.ToString()),
                             X0Egress = Convert.ToDouble(result.Pdu.VbList[2].Value.ToString()),
@@ -186,161 +186,161 @@ public partial class Service1 : ServiceBase
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.1",
+            IPAddress = "192.168.100.2",
             Site = "Edison"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.2",
+            IPAddress = "192.168.2.1",
             Site = "New Brunswick"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.3",
+            IPAddress = "192.168.3.1",
             Site = "Perth Amboy"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.4",
+            IPAddress = "192.168.4.1",
             Site = "Somerville"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.5",
+            IPAddress = "192.168.5.1",
             Site = "Newton"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.6",
+            IPAddress = "192.168.6.1",
             Site = "Trenton"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.7",
+            IPAddress = "192.168.7.1",
             Site = "Belvidere"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.8",
+            IPAddress = "192.168.8.1",
             Site = "Paterson"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.9",
+            IPAddress = "192.168.9.1",
             Site = "Morristown"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.10",
+            IPAddress = "192.168.10.1",
             Site = "Flemington"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.11",
+            IPAddress = "192.168.11.1",
             Site = "Jersey City"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.12",
+            IPAddress = "192.168.12.1",
             Site = "Elizabeth"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.13",
+            IPAddress = "192.168.13.1",
             Site = "Freehold"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.14",
+            IPAddress = "192.168.14.1",
             Site = "Toms River"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.15",
+            IPAddress = "192.168.15.1",
             Site = "Newark"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.17",
+            IPAddress = "192.168.17.1",
             Site = "Atlantic City"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.18",
+            IPAddress = "192.168.18.1",
             Site = "Cape May"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.19",
+            IPAddress = "192.168.19.1",
             Site = "Hackensack"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.20",
+            IPAddress = "192.168.20.1",
             Site = "Camden"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.21",
+            IPAddress = "192.168.21.1",
             Site = "Vineland"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.22",
+            IPAddress = "192.168.22.1",
             Site = "Mt. Holly"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.23",
+            IPAddress = "192.168.23.1",
             Site = "Woodbury"
         });
 
         database.GetCollection<Device>("devices").InsertOne(new Device
         {
             Id = Guid.NewGuid(),
-            IPAddress = "172.16.8.99",
+            IPAddress = "192.168.99.1",
             Site = "Cedar Knolls"
         });
 

@@ -113,3 +113,4 @@ C:\VS\services\bandwidthmonitor\bwm-svc\bwm-svc\bin\Release\System.Buffers.xml
 C:\VS\services\bandwidthmonitor\bwm-svc\bwm-svc\obj\Release\bwm-svc.csproj.CopyComplete
 C:\VS\services\bandwidthmonitor\bwm-svc\bwm-svc\obj\Release\bwm-svc.exe
 C:\VS\services\bandwidthmonitor\bwm-svc\bwm-svc\obj\Release\bwm-svc.pdb
+C:\VS\services\bandwidthmonitor\bwm-svc\bwm-svc\obj\Release\bwm-svc.csprojAssemblyReference.cache
